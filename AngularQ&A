@@ -1,0 +1,30 @@
+How will you update the view if your model data is updated outside the 'Zone'?
+How are observables different from promises?
+Why is there a need for compilation? What are the two types of compilation in Angular?
+What are the advantages of using AOT compilation?
+What is multicasting? 
+Angular 9 Interview Questions 
+1.	How is Constructor different from ngOnInit?
+2.	What's new about Angular 9?
+3.	What were the improvements in the tree shaking in Angular 9?
+4.	What is new in Angular ivy in Angular 9?
+5.	Explain the new options for 'providedIn' in the 9th version.
+Angular 10 Interview Questions
+1.	Why was bazel deprecated in version 10?
+2.	How is Angular 10 better than the previous version?
+3.	How does Angular 10 boost ngcc performance?
+4.	What are the advantages of choosing Angular 10?
+Angular 11 Interview Questions 
+1.	How does Angular 11 offer support for Hot Module Replacement?
+2.	What is an operation byelog?
+3.	What is automatic font inlining in Angular 11?
+4.	What is the use of the parallel function?
+5.	How does the manualChangeDetection function impact change detection in Angular 11?
+6.	Why did Angular 11 promote ESLint over TSLint? 
+Angular 12 and 13 Interview Questions 
+1.	What is the component test harness in Angular 12?
+2.	What is a nullish coalescing operator?
+3.	What should you migrate to Angular 12?
+4.	Why is the View Engine no longer available in Angular 13?
+5.	Why has IE 11 support been removed in Angular 13?
+
