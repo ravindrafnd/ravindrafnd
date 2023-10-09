@@ -28,4 +28,55 @@ Angular 12 and 13 Interview Questions
 4.	Why is the View Engine no longer available in Angular 13?
 5.	Why has IE 11 support been removed in Angular 13?
 What is MVVM Architecture?
+How do you provide a service?
+You must register at least one provider of any service you are going to use. A service can be provided for specific modules or components or it can be made available everywhere in your application.
+Provide at root level
+@Injectable({
 
+ providedIn: 'root',
+
+})
+Angular creates a single, shared instance if a service is provided at root level. This shared instance is injected into any class that asks for it. By using the @Injectable() metadata, Angular can remove the service from the compiled app if it isn't used.
+Provide with a specific NgModule
+Registering a provider with a specific NgModule will return the same instance of a service to all components in that NgModule if they ask for it.
+@NgModule({
+
+  providers: [
+
+  BackendService,
+
+  Logger
+
+ ],
+
+ ...
+
+})
+Provide at component level
+A new instance of a service is generated for each new instance of the component if you register the provider at component level.
+@Component({
+
+  selector:    'app-hero-list',
+
+  templateUrl: './hero-list.component.html',
+
+  providers:  [ HeroService ]
+
+})
+What are the advantages of AOT?
+The application can be rendered without compiling the app because the browser downloads a pre-compiled version of the application.
+External CSS style sheets and HTML templates are included within the application JavaScript code. This way, a lot of AJAX requests can be saved.
+It is not necessary to download the Angular compiler which reduces the application payload.
+Template binding errors can be detected and reported during the build step itself
+No injection attacks as HTML templates and components are compiled into JavaScript.
+16. What are @HostBinding and @HostListener?
+@HostListener() function decorator allows you to handle events of the host element in the directive class. For example, it can be used to change the color of the host element if you hover over the host element with the mouse.
+@HostBinding() function decorator allows you to set the properties of the host element from the directive class. In this directive class, we can change any style property like height, width, color, margin, border, etc.
+
+What are the various security contexts in Angular?
+Angular defines the following security contexts for sanitization,
+
+HTML: It is used when interpreting a value as HTML such as binding to innerHtml.
+Style: It is used when binding CSS into the style property.
+URL: It is used for URL properties such as <a href>.
+Resource URL: It is a URL that will be loaded and executed as code such as <script src>.
